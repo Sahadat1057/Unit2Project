@@ -10,12 +10,12 @@ Objects:
 
 
 Constructors:
-
+public LinearEquation(slope(int x1, int y1, int x2, int y2) slope method
 
 Methods:
     public int difference(int x, int y) difference method
     public double slope(int x1, int y1, int x2, int y2) slope method
-    
+
 
 
 
@@ -29,7 +29,7 @@ Steps:
     Step 4: Ask user to enter fourth coordinate point(y2)
     Step 5: Calculate Slope using a method which has 4 parameters, it takes the difference of the y and x values and divides y over x
     Step 6: Use calculateY-Intercept method which takes in 2 parameters (x and y), this method will find out the y intercept because if you have y and x plus the slope you can calculate the y intercept
-    Step 7:
+    Step 7: Use a constructor to call
 
 
 What to figure out:
