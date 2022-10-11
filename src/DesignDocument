@@ -1,0 +1,36 @@
+LinearEquation class
+
+Instance variables:
+    private int x1- this variable represents the x variable in the first coordinate, for slope
+    private int y1- this variable represents the y variable in the first coordinate, for slope
+    private int x2- this variable represents the x value in the second coordinate, for slope
+    private int y2- this variable represents the y value in the second coordinate
+
+Objects:
+
+
+Constructors:
+
+
+Methods:
+    public int difference(int x, int y) difference method
+    public double slope(int x1, int y1, int x2, int y2) slope method
+    
+
+
+
+EquationRunner.java
+
+Steps:
+
+    Step 1: Ask user to enter first coordinate point(x1)
+    Step 2: Ask user to enter second coordinate point(y1)
+    Step 3: Ask user to enter third coordinate point(x2)
+    Step 4: Ask user to enter fourth coordinate point(y2)
+    Step 5: Calculate Slope using a method which has 4 parameters, it takes the difference of the y and x values and divides y over x
+    Step 6: Use calculateY-Intercept method which takes in 2 parameters (x and y), this method will find out the y intercept because if you have y and x plus the slope you can calculate the y intercept
+    Step 7:
+
+
+What to figure out:
+Method to converting String to int
