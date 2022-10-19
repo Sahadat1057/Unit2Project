@@ -13,16 +13,13 @@ public class LinearEquation {
     }
 
     public double slope() {
-        int yDifference = y2 - y1;
-        int xDifference = x2 - x1;
-        double slope = (double) yDifference / xDifference; //figure out how to cast double
-        return slope;
+         yDifference = y2 - y1;
+         xDifference = x2 - x1;
+        double slope = (double) yDifference / xDifference;
+        double roundedSlope = (Math.round(slope * 100.0) / 100.0);
+        return roundedSlope;
     }
 
-    private String slopeInterceptForm() {
-        String slopeInterceptForm = ("(" + yDifference + "/" + xDifference + ")" + "x" + findYIntercept() );
-        return slopeInterceptForm;
-    }
 
 
     public double findYIntercept () {
@@ -31,27 +28,42 @@ public class LinearEquation {
         return yIntercept;
 
     }
-    public double findDistance () {
-         double distance = Math.sqrt(Math.pow(x2 - x1, x2 - x1 ) + Math.pow(y2 - y1, y2 - y1 ));
-         return distance;
+
+    public String slopeInterceptForm() {
+        String slopeInterceptForm = ("y = " + "(" + yDifference + "/" + xDifference + ")" + "x + " + findYIntercept() );
+        return slopeInterceptForm;
     }
 
-    public String toString() {
-        String coordinateInfo = "First Coordinate Pair: (" + x1 + ", " + y1 + ")";
-        String secondcoordinateInfo = "Second Coordinate Pair: (" + x2 + "," + y2 + ")";
-        String slopeInfo = "Slope of line:" + slope();
-        String yInterceptInfo = "Y intercept: " + findYIntercept();
-        String slopeInterceptInfo = "Slope Intercept Form: " + slopeInterceptForm();
-        String distanceInfo = "Distance between two points: " + findDistance();
-        return coordinateInfo + secondcoordinateInfo + slopeInfo + yInterceptInfo + slopeInterceptInfo + distanceInfo;
 
+    public double findDistance () {
+         int xDifference = x2 - x1;
+         int yDifference = y2 - y1;
+         double distance = (double) Math.sqrt(Math.pow(xDifference, 2) + Math.pow(yDifference , 2 ));
+         double roundedDistance = (Math.round(distance * 100.0) / 100.0);
+         return roundedDistance;
     }
 
     public String findCoordinatePoint (double knownXValue) {
         double mxValue = (slope() * knownXValue);
-        double yValue = (double) mxValue + findYIntercept();
-        String findCoordinatePoint = ( "(" + knownXValue + ", " + yValue );
+        double yValue = (mxValue + findYIntercept());
+        double roundedYValue = (Math.round(yValue * 100.0) / 100.0);
+        String findCoordinatePoint = ( "(" + knownXValue + "," + roundedYValue + ")");
         return findCoordinatePoint;
     }
+
+    public String toString() {
+        String coordinateInfo = "First Coordinate Pair: (" + x1 + "," + y1 + ")" + "\r\n";
+        String secondcoordinateInfo = "Second Coordinate Pair: (" + x2 + "," + y2 + ")" + "\r\n";
+        String slopeInfo = "Slope of line: " + slope() + "\r\n";
+        String yInterceptInfo = "Y intercept: " + findYIntercept() + "\r\n";
+        String slopeInterceptInfo = "Slope Intercept Form: " + slopeInterceptForm() + "\r\n";
+        String distanceInfo = "Distance between the two points: " + findDistance() + "\r\n";
+        String totalInfo = coordinateInfo + secondcoordinateInfo + slopeInfo + yInterceptInfo + slopeInterceptInfo + distanceInfo;
+        return totalInfo;
+
+    }
+
+
+
 
 }

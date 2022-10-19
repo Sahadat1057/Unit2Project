@@ -14,17 +14,17 @@ public class EquationRunner {
 
             int findsecondComma = secondCoordinate.indexOf(",");
             int x2 = Integer.parseInt(secondCoordinate.substring(1 , findsecondComma));
-            int y2 = Integer.parseInt(secondCoordinate.substring(findsecondComma +1,secondCoordinate.length() ));
+            int y2 = Integer.parseInt(secondCoordinate.substring(findsecondComma + 1 ,secondCoordinate.length() - 1 ));
 
-            LinearEquation slopeEquation = new LinearEquation(x1,y1, x2, y2);
+            LinearEquation slopeEquation = new LinearEquation(x1, y1, x2, y2);
 
             System.out.println(slopeEquation.toString());
 
             System.out.print("Enter an x value: ");
-            double xValue = s.nextDouble();
+            double knownxValue = s.nextDouble();
 
-            String findCoordinatePoint = slopeEquation.findCoordinatePoint(xValue);
-            System.out.println("The solved coordinate plane is: " + findCoordinatePoint);
+            String findCoordinatePoint = slopeEquation.findCoordinatePoint(knownxValue);
+            System.out.print("The solved coordinate plane is: " + findCoordinatePoint);
 
 
 
