@@ -65,7 +65,7 @@ public class LinearEquation {
         String coordinateInfo = "First Coordinate Pair: (" + x1 + "," + y1 + ")" + "\r\n";
         String secondcoordinateInfo = "Second Coordinate Pair: (" + x2 + "," + y2 + ")" + "\r\n";
         String slopeInfo = "Slope of line: " + roundedSlope() + "\r\n";
-        String yInterceptInfo = "Y Intercept: " + findYIntercept() + "\r\n";
+        String yInterceptInfo = "Y Intercept: " + roundedYIntercept() + "\r\n";
         String slopeInterceptInfo = "Slope Intercept Form: " + slopeInterceptForm() + "\r\n";
         String distanceInfo = "Distance between the two points: " + findDistance() + "\r\n";
         String totalInfo = coordinateInfo + secondcoordinateInfo + slopeInfo + yInterceptInfo + slopeInterceptInfo + distanceInfo;
