@@ -26,12 +26,6 @@ public class EquationRunner {
             String findCoordinatePoint = slopeEquation.findCoordinatePoint(knownxValue);
             System.out.print("The solved coordinate plane is: " + findCoordinatePoint);
 
-
-
-
-
-
-
         }
     }
 

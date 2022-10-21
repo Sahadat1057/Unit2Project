@@ -5,28 +5,40 @@ Instance variables:
     private int y1- this variable represents the y variable in the first coordinate
     private int x2- this variable represents the x value in the second coordinate
     private int y2- this variable represents the y value in the second coordinate
+    private int xDifference- this variable represents the difference between x2 and x1, used to show the slope intercept form in fraction form
+    private int yDifference- this variable represents the difference between y2 and y1, used to show the slope intercept form in fraction form
 
 
 
 Constructors:
-    public LinearEquation(int x1, int y1, int x2, int y2) slope method
+    public LinearEquation(int x1, int y1, int x2, int y2)
 
 
 Methods:
-    public int difference(int x, int y) difference method
-    This method will find the difference between y and x
 
-    public double slope(int x1, int y1, int x2, int y2) slope method
-    This method will call the difference method parameters to find out the slope
+    public double slope() slope method
+    This method will use the instance variables x1, x2, y1, y2 to calculate the slope
 
-    public double findY-Intercept(double x1, double y1)
-    This method will use one of the previous points to find out the y intercept
+    public double findYIntercept()
+    This method will use the instance variables x1 and y1 to calculate the value of the y intercept
 
-    public double distanceFormula(int x1, int y1, int x1, int y2)
-    This method will use the same parameters as the slope method and LinearEquation calculator to find the distance betweeen the two points
+    public String slopeInterceptForm()
+    This method will use the instance variables xDifference and yDifference and calling the findYIntercept method to showcase the slope intercept equation in fraction form
+
+    public double findDistance()
+    This method will use the instance variables xDifference and yDifference and the
+
+    math.pow()
+    This method will be used to square the xDifference and yDifference values in order for the distance formula to work
+
+    math.sqrt()
+    This method will be used to do the square root expression in order for the distance formula to work
 
     math.round()
-    This method will be used to round certain values
+    This method will be used to round the slope value , distance value, and y value to the hundredth place
+
+    public String findCoordinatePoint()
+    This method will be used to calculate the y value given the x value based on the slope intercept equation
 
     public String toString()
     This method will display all relevant information about this
@@ -34,6 +46,7 @@ Methods:
     - X and Y coordinate information
     - Slope Intercept Form equation (includes y intercept)
     - Distance between both coordinates
+
 
 
 
@@ -52,5 +65,4 @@ Steps:
     Step 9: Use method to String to display all this info
 
 
-What to figure out:
-Method to converting String to int
+

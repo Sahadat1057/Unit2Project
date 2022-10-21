@@ -27,8 +27,6 @@ public class LinearEquation {
         return roundedSlope;
     }
 
-
-
     public double findYIntercept () {
         double mxValue = (slope() * x1);
         double yIntercept = (y1 - mxValue);
@@ -46,7 +44,6 @@ public class LinearEquation {
         String slopeInterceptForm = ("y = " + "(" + yDifference + "/" + xDifference + ")" + "x + " + roundedYIntercept() );
         return slopeInterceptForm;
     }
-
 
     public double findDistance () {
          int xDifference = x2 - x1;
@@ -75,8 +72,6 @@ public class LinearEquation {
         return totalInfo;
 
     }
-
-
 
 
 }

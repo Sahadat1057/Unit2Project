@@ -12,21 +12,28 @@ Instance variables:
 
 Constructors:
     public LinearEquation(int x1, int y1, int x2, int y2)
+    This constructor will set the instance variables into the specific parameters
 
 
 Methods:
 
-    public double slope() slope method
+    public double slope() method
     This method will use the instance variables x1, x2, y1, y2 to calculate the slope
+
+    public double roundedSlope() method;
+    This method will return the rounded slope value to the nearest hundredth
 
     public double findYIntercept()
     This method will use the instance variables x1 and y1 to calculate the value of the y intercept
+
+    public double roundedYIntercept()
+    This method will return the rounded Y Intercept value to the nearest hundredth
 
     public String slopeInterceptForm()
     This method will use the instance variables xDifference and yDifference and calling the findYIntercept method to showcase the slope intercept equation in fraction form
 
     public double findDistance()
-    This method will use the instance variables xDifference and yDifference and the
+    This method will use the instance variables xDifference and yDifference and the math.pow, math.sqrt functions to find the distance which will then be rounded to the nearest hundredth
 
     math.pow()
     This method will be used to square the xDifference and yDifference values in order for the distance formula to work
@@ -35,7 +42,7 @@ Methods:
     This method will be used to do the square root expression in order for the distance formula to work
 
     math.round()
-    This method will be used to round the slope value , distance value, and y value to the hundredth place
+    This method will be used to round the slope value , y intercept value, distance value, and y value to the hundredth place
 
     public String findCoordinatePoint()
     This method will be used to calculate the y value given the x value based on the slope intercept equation
@@ -44,8 +51,9 @@ Methods:
     This method will display all relevant information about this
     instance including:
     - X and Y coordinate information
-    - Slope Intercept Form equation (includes y intercept)
-    - Distance between both coordinates
+    - Slope of line info (slope method)
+    - Slope Intercept Form equation (includes y intercept) (slopeInterceptForm)
+    - Distance between both coordinates (findDistance)
 
 
 
@@ -54,15 +62,13 @@ EquationRunner.java
 
 Steps:
 
-    Step 1: Ask user to enter x value of coordinate 1 (x1)
-    Step 2: Ask user to enter y value of coordinate 2 (y1)
-    Step 3: Ask user to enter x value of coordinate 2 (x2)
-    Step 4: Ask user to enter y value of coordinate 2 (y2)
-    Step 5: Create object, LinearEquation, which has 4 parameters
-    Step 6: Calculate Slope using a method which has 4 parameters, by calling it within the object LinearEquation
-    Step 7: Use calculateY-Intercept method which takes in 2 parameters (x and y), by calling it within the object, LinearEquation, and leaving the last 2 parameters blank
-    Step 8: Use distanceFormula method which takes in 4 parameters, by calling it within the object LinearEquation
-    Step 9: Use method to String to display all this info
+    Step 1: Ask user to enter the first coordinate (x1,y1)
+    Step 2: Ask user to enter the second coordinate (x2,y2)
+    Step 3: Use parse method to find where the x and y values are
+    Step 4: Create new object called slopeEquation, which has 4 parameters done by using the LinearEquation constructor
+    Step 5: Use method toString display slope of line, slope intercept form, and distance info
+    Step 6: Ask user to enter x value
+    Step 7: Use a method to print out the solved coordinate point
 
 
 
