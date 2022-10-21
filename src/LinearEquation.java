@@ -16,6 +16,13 @@ public class LinearEquation {
          yDifference = y2 - y1;
          xDifference = x2 - x1;
         double slope = (double) yDifference / xDifference;
+        return slope;
+    }
+
+    public double roundedSlope() {
+        yDifference = y2 - y1;
+        xDifference = x2 - x1;
+        double slope = (double) yDifference / xDifference;
         double roundedSlope = (Math.round(slope * 100.0) / 100.0);
         return roundedSlope;
     }
@@ -24,13 +31,19 @@ public class LinearEquation {
 
     public double findYIntercept () {
         double mxValue = (slope() * x1);
-        int yIntercept = (int) (y1 - mxValue);
+        double yIntercept = (y1 - mxValue);
         return yIntercept;
+    }
 
+    public double roundedYIntercept() {
+        double mxValue = (slope() * x1);
+        double yIntercept = (y1 - mxValue);
+        double roundedYIntercept = (Math.round(yIntercept * 100.0) / 100.0);
+        return roundedYIntercept;
     }
 
     public String slopeInterceptForm() {
-        String slopeInterceptForm = ("y = " + "(" + yDifference + "/" + xDifference + ")" + "x + " + findYIntercept() );
+        String slopeInterceptForm = ("y = " + "(" + yDifference + "/" + xDifference + ")" + "x + " + roundedYIntercept() );
         return slopeInterceptForm;
     }
 
@@ -54,8 +67,8 @@ public class LinearEquation {
     public String toString() {
         String coordinateInfo = "First Coordinate Pair: (" + x1 + "," + y1 + ")" + "\r\n";
         String secondcoordinateInfo = "Second Coordinate Pair: (" + x2 + "," + y2 + ")" + "\r\n";
-        String slopeInfo = "Slope of line: " + slope() + "\r\n";
-        String yInterceptInfo = "Y intercept: " + findYIntercept() + "\r\n";
+        String slopeInfo = "Slope of line: " + roundedSlope() + "\r\n";
+        String yInterceptInfo = "Y Intercept: " + findYIntercept() + "\r\n";
         String slopeInterceptInfo = "Slope Intercept Form: " + slopeInterceptForm() + "\r\n";
         String distanceInfo = "Distance between the two points: " + findDistance() + "\r\n";
         String totalInfo = coordinateInfo + secondcoordinateInfo + slopeInfo + yInterceptInfo + slopeInterceptInfo + distanceInfo;
