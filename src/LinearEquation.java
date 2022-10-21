@@ -1,17 +1,19 @@
 public class LinearEquation {
-    private int x1;
+    private int x1; // instance variables for my code below:
     private int y1;
     private int x2;
     private int y2;
     private int yDifference;
     private int xDifference;
+
+    // constructor for my code below:
     public LinearEquation(int x1, int y1, int x2, int y2) {
         this.x1 = x1;
         this.y1 = y1;
         this.x2 = x2;
         this.y2 = y2;
     }
-
+    // methods for my code below:
     public double slope() {
          yDifference = y2 - y1;
          xDifference = x2 - x1;
@@ -60,7 +62,7 @@ public class LinearEquation {
         String findCoordinatePoint = ( "(" + knownXValue + "," + roundedYValue + ")");
         return findCoordinatePoint;
     }
-
+    // method that prints all out the specific information required:
     public String toString() {
         String coordinateInfo = "First Coordinate Pair: (" + x1 + "," + y1 + ")" + "\r\n";
         String secondcoordinateInfo = "Second Coordinate Pair: (" + x2 + "," + y2 + ")" + "\r\n";
